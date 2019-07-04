@@ -1,0 +1,32 @@
+{% block title %}
+daily Appointments
+{% endblock title %}
+
+{% block content %}
+
+
+ <table id="gratification_table" class="centered striped"
+
+                                           cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>S.NO</th>
+        <th>Task</th>
+        <th>Appointment Date</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for detail in details %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{detail.task}}</td>
+        <td>{{detail.appointment_on}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}
